@@ -44,7 +44,7 @@ def export_device(router: Tuple[str,str] ) -> None:
         return None
 
     except:
-        fail=current_date+'-backup-export-fail'
+        fail='Backup-export-fail'
         with open(link + router[0] + '/' + fail, "w") as file_write:
             file_write.write(fail)
         return None
@@ -75,7 +75,7 @@ def backup_device(router: Tuple[str,str]) -> None:
         client.close()
 
     except:
-        fail=current_date+'-backup-fail'
+        fail='Backup-fail'
         with open(link + router[0] + '/' + fail, "w") as file_write:
             file_write.write(fail)
     return None
